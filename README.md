@@ -1,2 +1,1 @@
-hello world!
-just update!
+前端技术学习平台
