@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import {test} from "@/module/main/api/api";
 
+import {test} from "@/module/main/api/api";
 export default {
   name: "UMain",
   methods:{
