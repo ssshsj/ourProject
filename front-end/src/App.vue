@@ -1,10 +1,8 @@
 <template>
   <router-view>
   </router-view>
-<!--下面是没用的-->
+<!--来自SXC-->
 
-  <router-view>
-  </router-view>
 </template>
 
 <script>
