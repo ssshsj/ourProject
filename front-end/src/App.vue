@@ -1,11 +1,10 @@
 <template>
   <router-view>
   </router-view>
-<!--来自SXX-->
+<!--来自SXC-->
 </template>
 
 <script>
-
 export default {
   name: 'App',
   components: {
