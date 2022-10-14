@@ -1,25 +1,20 @@
 <template>
-  <div>
-    <h2>前端技术大作业</h2>
-    <el-button @click="getAccount">获取小明的账号</el-button>
+  <div class="pt-70">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-import {test} from "@/module/main/api/api";
 export default {
   name: "UMain",
   methods:{
-    getAccount(){
-      test('小明').then((res)=>{
-        alert('小明的账号:'+res.userAccount)
-      })
-    }
   }
 }
 </script>
 
 <style scoped>
-
+.pt-70{
+  padding-top: 70px;
+}
 </style>

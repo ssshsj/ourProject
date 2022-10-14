@@ -13,8 +13,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-
-}
+<style lang="scss" rel="stylesheet/scss">
+@import "@/assets/css/all.scss";
 </style>

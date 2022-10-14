@@ -5,12 +5,21 @@ import store from "@/store/index";
 const routes = [
     {
         path: '/',
-        redirect:'/main'
+        name: 'Index',
+        component: () => import('@/views/Index'),
+        redirect: '/home',
+        children: [
+            {
+                path: 'home',
+                name: 'home',
+                component: () => import('@/module/home/views/UHome')
+            },
+        ]
     },
     {
         name:'403',
         path: '/403',
-        component: () => import('@/views/403'),
+        component: () => import('@/views/403/403'),
     },
     {
         name:'main',
