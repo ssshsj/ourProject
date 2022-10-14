@@ -1,8 +1,7 @@
 <template>
   <router-view>
   </router-view>
-<!--来自SXC-->
-
+<!--来自SXX-->
 </template>
 
 <script>
