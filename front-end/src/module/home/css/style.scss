@@ -1,5 +1,6 @@
 @import '@/assets/css/theme_color';
 @import '@/assets/css/mixin.scss';
+@import '@/assets/css/_responsive.scss';
 .hero-area{
     position: relative;
     z-index: 2;
@@ -68,7 +69,7 @@ a, a:focus, a:hover {
 }
 .padding-80-0{
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -93,4 +94,101 @@ a, a:focus, a:hover {
 }
 .mb-80{
     margin-bottom: 80px;
+}
+.popular-courses-area {
+    //position: relative;
+    background-repeat: repeat;
+    background-image: url(/static/img/core-img/texture.png);
+    //横向和竖向重复
+    height: 600px;
+}
+.section-heading {
+    margin-bottom: 70px;
+    text-align: center;
+    h3 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+}
+.single-popular-course {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    background-color: $white-color;
+    cursor: pointer;
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 6px 6px 0 0;
+    }
+    .course-content {
+        padding: 25px;
+        h4 {
+            margin-bottom: 5px;
+        }
+        .meta {
+            margin-bottom: 15px;
+            span {
+                margin-right: 10px;
+            }
+            a {
+                color: rgba(0, 0, 0, 0.4);
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 400;
+                margin-right: 10px;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .seat-rating-fee {
+        display: inline-flex;
+        width: 100%;
+        height: 40px;
+        background-color: $bg-gray;
+        border-radius: 0 0 6px 6px;
+        .seat-rating {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+            height: 100%;
+            align-items: center;
+            div {
+                display: inline-block;
+                padding: 0 20px;
+                border-right: 1px solid $border-color;
+                height: 100%;
+                line-height: 40px;
+            }
+            i {
+                font-size: 13px;
+                color: rgba(0, 0, 0, 0.3);
+            }
+        }
+        .course-fee {
+            a {
+                display: inline-block;
+                width: 70px;
+                height: 40px;
+                border-radius: 0 0 6px 0;
+                background-color: #e3d21b;
+                text-align: center;
+                line-height: 40px;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $white-color;
+                letter-spacing: 0.75px;
+                &.free {
+                    background-color: $bg-default;
+                }
+            }
+        }
+    }
 }

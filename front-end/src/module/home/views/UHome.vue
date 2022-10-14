@@ -27,6 +27,46 @@
         </el-col>
       </el-row>
     </div>
+    <div class="popular-courses-area padding-80-0">
+      <el-row justify="center" :gutter="50">
+        <el-col span="24">
+          <div class="section-heading">
+            <h3>热门课程</h3>
+          </div>
+        </el-col>
+      </el-row>
+      <el-row justify="center" :gutter="50">
+        <el-col v-for="i in 3" :span="6">
+          <transition name="fade-transform" mode="out-in">
+            <div class="single-popular-course" v-show="showCourses">
+              <img :src="require('@/assets/img/bg-img/c1.jpg')" alt="">
+              <div class="course-content">
+                <h4>英语语法</h4>
+                <div class="meta d-flex align-items-center">
+                  <a href="#">Tanma</a>
+                  <span></span>
+                  <a href="#">艺术 &amp; 设计</a>
+                </div>
+                <p>7天搞定英语语法，一线名师带你突破英语基础语法困境，扎实提升。</p>
+              </div>
+              <div class="seat-rating-fee d-flex justify-content-between">
+                <div class="seat-rating h-100 d-flex align-items-center">
+                  <div class="seat">
+                    <i class="el-icon-user-solid" aria-hidden="true"></i> 10
+                  </div>
+                  <div class="rating">
+                    <i class="el-icon-star-on" aria-hidden="true"></i> 4.5
+                  </div>
+                </div>
+                <div class="course-fee h-100">
+                  <a href="#" class="free">免费</a>
+                </div>
+              </div>
+            </div>
+          </transition>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -40,6 +80,7 @@ export default {
   data(){
     return{
       showFacts: false,
+      showCourses:false,
       starUrl:require('@/assets/img/core-img/star.png'),
       sections:[
         {
@@ -64,6 +105,14 @@ export default {
   },
   created() {
     let vm = this
+    window.onscroll = function () {
+      vm.isActive = document.documentElement.scrollTop > 60
+      if (document.documentElement.scrollTop > 250) {
+        setTimeout(() => {
+          vm.showCourses = true
+        }, 350)
+      }
+    }
     setTimeout(() => {
       vm.showFacts = true
     }, 350)
