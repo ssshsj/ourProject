@@ -1,6 +1,8 @@
 <template>
   <router-view>
   </router-view>
+<!--下面是没用的-->
+
   <router-view>
   </router-view>
 </template>
